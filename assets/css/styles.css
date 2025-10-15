@@ -8,6 +8,19 @@
   --brand-2: #8acb88;
   --accent: #ffd166;
 }
+body {
+  transition: background 0.3s, color 0.3s;
+}
+
+:root[data-theme="light"] {
+  --bg: #f7f9fc;
+  --card: #fff;
+  --text: #222;
+  --muted: #555;
+  --brand: #0077cc;
+  --brand-2: #4caf50;
+  --accent: #ffd166;
+}
 * {
   box-sizing: border-box;
 }
@@ -21,7 +34,7 @@ body {
     Arial, "Apple Color Emoji", "Segoe UI Emoji";
   line-height: 1.6;
   color: var(--text);
-  background: linear-gradient(180deg, #111418 0%, #0b0f14 100%);
+  background: linear-gradient(180deg, var(--bg) 0%, var(--card) 100%);
 }
 
 .container {
@@ -48,8 +61,8 @@ body {
   top: 0;
   z-index: 20;
   backdrop-filter: blur(8px);
-  background: rgba(11, 15, 20, 0.6);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  /*  background: rgba(11, 15, 20, 0.65); */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
 }
 .header-inner {
   display: flex;
@@ -58,7 +71,7 @@ body {
   padding: 0.8rem 0;
 }
 .brand {
-  color: #fff;
+  color: var(--text);
   font-weight: 700;
   text-decoration: none;
   letter-spacing: 0.2px;
@@ -73,6 +86,10 @@ body {
 .nav a {
   color: var(--muted);
   text-decoration: none;
+}
+
+:root[data-theme="light"] .nav a {
+  color: var(--text);
 }
 .nav a[aria-current="page"],
 .nav a:hover {
@@ -184,7 +201,7 @@ section {
   padding: 0.25rem 0.5rem;
   border-radius: 0.5rem;
   text-decoration: none;
-  color: #0b0f14;
+  color: #fff;
   background: var(--brand);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -192,25 +209,25 @@ section {
   filter: brightness(1.05);
 }
 .badge.spacing {
-  background: #8acb88;
+  background: #388e3c;
 }
 .badge.interleaving {
-  background: #ffd166;
+  background: #e6b800;
 }
 .badge.retrieval {
-  background: #5cc8ff;
+  background: #005fa3;
 }
 .badge.multimodal {
-  background: #caa6ff;
+  background: #7c4dff;
 }
 .badge.feedback {
-  background: #ff9f9f;
+  background: #d32f2f;
 }
 
 /* Footer */
 .site-footer {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
-  background: rgba(11, 15, 20, 0.6);
+  /*   background: rgba(11, 15, 20, 0.6); */
 }
 .footer-inner {
   padding: 1rem 0;

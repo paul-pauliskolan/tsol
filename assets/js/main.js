@@ -9,4 +9,30 @@
       btn.setAttribute("aria-expanded", String(open));
     });
   }
+  // Dark/Light mode toggle
+  const themeToggle = document.getElementById("theme-toggle");
+  const root = document.documentElement;
+  function setTheme(theme) {
+    root.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+    if (themeToggle) themeToggle.textContent = theme === "light" ? "☀️" : "🌙";
+  }
+  // Initial theme
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    setTheme(savedTheme);
+  } else {
+    // System preference
+    const prefersLight = window.matchMedia(
+      "(prefers-color-scheme: light)"
+    ).matches;
+    setTheme(prefersLight ? "light" : "dark");
+  }
+  if (themeToggle) {
+    themeToggle.addEventListener("click", function () {
+      const current =
+        root.getAttribute("data-theme") === "light" ? "dark" : "light";
+      setTheme(current);
+    });
+  }
 })();
