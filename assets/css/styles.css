@@ -264,7 +264,7 @@ section {
     display: block;
     background: none;
     color: var(--text);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(130, 130, 130, 0.9);
     border-radius: 0.5rem;
     padding: 0.4rem 0.6rem;
   }
@@ -273,9 +273,9 @@ section {
     position: absolute;
     right: 4%;
     top: 52px;
-    background: rgba(11, 15, 20, 0.95);
+    background: var(--bg);
     padding: 0.8rem;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(119, 119, 119, 0.2);
     border-radius: 0.6rem;
   }
   nav .nav.open {
