@@ -37,6 +37,10 @@ body {
   background: linear-gradient(180deg, var(--bg) 0%, var(--card) 100%);
 }
 
+.subjects > li {
+  margin-top: 3svh;
+}
+
 .container {
   width: 92%;
   max-width: 1100px;
