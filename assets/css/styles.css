@@ -15,8 +15,8 @@
 }
 /* Base */
 :root {
-  --bg: #0b0f14;
-  --card: #121821;
+  --bg: #100d08;
+  --card: #0a0a0a;
   --text: #e6eef8;
   --muted: #b6c2d0;
   --brand: #5cc8ff;
@@ -29,7 +29,7 @@ body {
 
 :root[data-theme="light"] {
   --bg: #f7f9fc;
-  --card: #fff;
+  --card: #faf9f6;
   --text: #222;
   --muted: #555;
   --brand: #0077cc;
@@ -49,7 +49,15 @@ body {
     Arial, "Apple Color Emoji", "Segoe UI Emoji";
   line-height: 1.6;
   color: var(--text);
-  background: linear-gradient(180deg, var(--bg) 0%, var(--card) 100%);
+  /* Mjukare övergång i båda ändar: fler färgstopp närmare kanterna ger en jämn toning */
+  background: linear-gradient(
+    180deg,
+    var(--bg) 0%,
+    var(--bg) 12%,
+    var(--card) 50%,
+    var(--bg) 88%,
+    var(--bg) 100%
+  );
 }
 
 .subjects > li {
