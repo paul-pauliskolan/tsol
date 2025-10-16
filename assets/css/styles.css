@@ -9,7 +9,8 @@
   transition: text-decoration 0.2s, color 0.2s;
   display: inline-block;
 }
-.toc a:hover, .toc a:focus {
+.toc a:hover,
+.toc a:focus {
   text-decoration: underline;
 }
 /* Base */
