@@ -13,6 +13,16 @@
 .toc a:focus {
   text-decoration: underline;
 }
+/* Book list links: green text, no background, underline only on hover/focus */
+.book-list .book-entry a {
+  color: #3a7;
+  text-decoration: none;
+  transition: text-decoration 0.2s, color 0.2s;
+}
+.book-list .book-entry a:hover,
+.book-list .book-entry a:focus {
+  text-decoration: underline;
+}
 /* Base */
 :root {
   --bg: #100d08;
