@@ -34,7 +34,7 @@
   --brand-2: #8acb88;
   --accent: #ffd166;
 }
-body {
+.lararkompassen-banner {
   transition: background 0.3s, color 0.3s;
 }
 
@@ -321,4 +321,36 @@ section {
   .hero h1 {
     font-size: 3rem;
   }
+}
+
+./* Lärarkompassen banner shown under header; placeholder description */
+.lararkompassen-banner {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  margin: 0.75rem 0 1rem;
+  color: var(--muted);
+}
+.lararkompassen-banner p {
+  margin: 0;
+}
+
+/* Banner link styles: use green accent and underline only on hover/focus */
+.lararkompassen-banner a {
+  color: #3a7;
+  text-decoration: none;
+}
+.lararkompassen-banner a:hover,
+.lararkompassen-banner a:focus {
+  text-decoration: underline;
+}
+
+/* Ensure bold text inside the banner also uses the green accent */
+.lararkompassen-banner strong {
+  color: #3a7;
 }
