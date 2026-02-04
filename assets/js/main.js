@@ -22,11 +22,7 @@
   if (savedTheme) {
     setTheme(savedTheme);
   } else {
-    // System preference
-    const prefersLight = window.matchMedia(
-      "(prefers-color-scheme: light)"
-    ).matches;
-    setTheme(prefersLight ? "light" : "dark");
+    setTheme("light");
   }
   if (themeToggle) {
     themeToggle.addEventListener("click", function () {

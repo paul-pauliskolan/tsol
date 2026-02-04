@@ -6,7 +6,9 @@
   border-radius: 0;
   padding: 0;
   margin: 0 0.15em 0.25em 0;
-  transition: text-decoration 0.2s, color 0.2s;
+  transition:
+    text-decoration 0.2s,
+    color 0.2s;
   display: inline-block;
 }
 .toc a:hover,
@@ -18,7 +20,9 @@
 .pres {
   color: #3a7;
   text-decoration: none;
-  transition: text-decoration 0.2s, color 0.2s;
+  transition:
+    text-decoration 0.2s,
+    color 0.2s;
 }
 .book-list .book-entry a:hover,
 .book-list .book-entry a:focus {
@@ -26,25 +30,27 @@
 }
 /* Base */
 :root {
-  --bg: #100d08;
-  --card: #0a0a0a;
-  --text: #e6eef8;
-  --muted: #b6c2d0;
-  --brand: #5cc8ff;
-  --brand-2: #8acb88;
-  --accent: #ffd166;
-}
-.lararkompassen-banner {
-  transition: background 0.3s, color 0.3s;
-}
-
-:root[data-theme="light"] {
   --bg: #f7f9fc;
   --card: #faf9f6;
   --text: #222;
   --muted: #555;
   --brand: #0077cc;
   --brand-2: #4caf50;
+  --accent: #ffd166;
+}
+.lararkompassen-banner {
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+:root[data-theme="dark"] {
+  --bg: #100d08;
+  --card: #0a0a0a;
+  --text: #e6eef8;
+  --muted: #b6c2d0;
+  --brand: #5cc8ff;
+  --brand-2: #8acb88;
   --accent: #ffd166;
 }
 * {
@@ -56,8 +62,16 @@ body {
 }
 body {
   margin: 0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
-    Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial,
+    "Apple Color Emoji",
+    "Segoe UI Emoji";
   line-height: 1.6;
   color: var(--text);
   /* Mjukare övergång i båda ändar: fler färgstopp närmare kanterna ger en jämn toning */
@@ -110,7 +124,10 @@ body {
   padding: 0.4rem 0.8rem;
   cursor: pointer;
   font-size: 1.1rem;
-  transition: background 0.2s, color 0.2s, border 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border 0.2s;
 }
 #theme-toggle:hover {
   background: var(--brand);
